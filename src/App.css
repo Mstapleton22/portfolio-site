@@ -182,11 +182,30 @@ table {
   background-size: cover;
 }
 .homeContent {
-  background-color: #B98953;
-  padding: 5px;
+  display: grid;
+  font-size: 1.3em;
+  grid-template-columns: (1);
+  /* flex-direction: column; */
+  align-content: center;
+  margin-top: -0px;
+  /* margin-bottom: -100px; */
   color: white;
 }
-
+.hometext {
+  font-size: 1.5em;
+  /* flex-direction: column; */
+  /* margin-top: -10px; */
+  color: white;
+}
+.iconRow {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around
+}
+.iconRow a {
+  color: white;
+}
 .Nav {
   display:flex;
   justify-content: flex-end;
@@ -265,6 +284,9 @@ table {
       opacity: .9;
       color: white;
     } 
+    .bamboo1 {
+      display: none;
+    }
 }
 .Nav a {
   text-decoration: none;
@@ -278,6 +300,18 @@ table {
    border-radius: 10%;
    box-shadow: 0 0 21px rgba(33,33,33,.2); 
  }
+ .bambooRow{
+   display:flex;
+   flex-direction: row;
+   justify-content: space-between
+ }
+ .bamboo {
+   height: 40vh;
+ }
+ .bamboo1 {
+  height: 40vh;
+  transform: scaleX(-1);
+}
 
 /* ABOUT PAGE STYLING *********************************/
 .About {
