@@ -28,12 +28,6 @@ class App extends Component {
             <Route path="/about" exact component={About} />
             <Route path="/resume" exact component={Resume} />
             <Route path="/projects" exact component={Projects} />
-            {/* <Route path="/sPark-userBook" component={userBook} />
-            <Route path="/sPark-login" render={() => <Login
-              navSearch={this.state.navSearch}
-              isLoggedIn={this.isLoggedIn}
-            />} /> */}
-            {/* <Route path="/sPark-space-manager-page" render={() => <SpaceManagerList isLoggedIn={this.state.isLoggedIn} customers={this.state.customers} />} /> */}
           </div>
         </Router>
       </div>

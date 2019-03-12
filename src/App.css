@@ -1,10 +1,133 @@
 .App {
   text-align: center;
+  background-color: transparent;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+/* CSS RESET  ********************************/
+html,
+body,
+div,
+button,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: 'Roboto', sans-serif;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+  font-family: 'Roboto', sans-serif;
+}
+body {
+  line-height: 1;
+  font-family: 'Roboto', sans-serif;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 .App-header {
@@ -30,26 +153,303 @@
     transform: rotate(360deg);
   }
 }
+/* HOME PAGE STYLING *********************************/
 .parallax {
   /* The image used */
-  background-image: url("https://media.idownloadblog.com/wp-content/uploads/2016/05/Digital-Color-Meter-utilities-folder-on-Mac.png");
+  background-image: url("bambooforest.jpg");
   /* Set a specific height */
-  min-height: 500px; 
+  min-height: 565px;
+  margin-top: 50px;
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  opacity: .9;
+  color: white;
+}
+.parallaxText {
+  display: flex;
+  font-size: 3em;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 5%;
 }
 .parallax1 {
   /* The image used */
-  background-image: url("wordcloud.jpg");
-  /* Set a specific height */
-  max-height: 300px;
-  min-height: 300px; 
+  background-image: url("codeimg.png");
+  min-height: 400px; 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
+.homeContent {
+  background-color: #B98953;
+  padding: 5px;
+  color: white;
+}
+
+.Nav {
+  display:flex;
+  justify-content: flex-end;
+  padding: 11px;
+  background-color: #B98953;
+  color: white;
+  position: fixed;
+  font-size: .7em;
+  margin-top: -50px;
+  z-index: 1;
+  width: 98.7%;
+}
+
+.Nav a {
+  text-decoration: none;
+  color: white;
+  padding: .5%;
+ }
+ .Nav a:hover {
+   background-color: #ebbe98;
+   border-radius: 10%;
+   box-shadow: 0 0 21px rgba(33,33,33,.2); 
+ }
+/* ABOUT PAGE STYLING *********************************/
+.About {
+  background-color: #E39DAF;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .sp-slideshow { 
+  position: relative;
+margin: 10px auto;
+width: 80%;
+max-width: 1000px;
+min-width: 260px;
+height: 460px;
+border: 10px solid #fff;
+border: 10px solid rgba(255,255,255,0.9);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.sp-content {
+  background: #7d7f72 url("https://www.mockupworld.co/wp-content/uploads/edd/2017/01/free-iphone-app-screens-mockup-psd-1000x577.jpg") repeat scroll 0 0;
+position: relative;
+width: 100%;
+height: 100%;
+overflow: hidden;
+}
+
+.sp-parallax-bg {
+  background: url("https://www.mockupworld.co/wp-content/uploads/edd/2017/01/free-iphone-app-screens-mockup-psd-1000x577.jpg") repeat-x scroll 0 0;
+  background-size: cover;
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+overflow: hidden;
+}
+.sp-slideshow input {
+  position: absolute;
+bottom: 15px;
+left: 50%;
+width: 9px;
+height: 9px;
+z-index: 1001;
+cursor: pointer;
+  opacity: 0;
+}
+
+.sp-slideshow input + label {
+  position: absolute;
+  bottom: 15px;
+left: 50%;
+  width: 6px;
+height: 6px;
+display: block;
+z-index: 1000;
+border: 3px solid #fff;
+border: 3px solid rgba(255,255,255,0.9);
+  border-radius: 50%;
+  transition: background-color linear 0.1s;
+}
+.sp-slideshow input:checked + label {
+background-color: #fff;
+  background-color: rgba(255,255,255,0.9);
+}
+
+.sp-selector-1, .button-label-1 {
+  margin-left: -36px;
+}
+
+.sp-selector-2, .button-label-2 {
+  margin-left: -18px;
+}
+
+.sp-selector-4, .button-label-4 {
+  margin-left: 18px;
+}
+.sp-selector-5, .button-label-5 {
+  margin-left: 36px;
+}
+.sp-arrow {
+  position: absolute;
+top: 50%;
+width: 28px;
+height: 38px;
+margin-top: -19px;
+display: none;
+opacity: 0.8;
+cursor: pointer;
+z-index: 1000;
+background: transparent url("https://www.mockupworld.co/wp-content/uploads/edd/2017/01/free-iphone-app-screens-mockup-psd-1000x577.jpg") no-repeat;
+  transition: opacity linear 0.3s;
+}
+.sp-arrow:hover{
+opacity: 1;
+}
+.sp-arrow:active{
+margin-top: -18px;
+}
+.sp-selector-1:checked ~ .sp-arrow.sp-a2,
+.sp-selector-2:checked ~ .sp-arrow.sp-a3,
+.sp-selector-3:checked ~ .sp-arrow.sp-a4,
+.sp-selector-4:checked ~ .sp-arrow.sp-a5 {
+    right: 15px;
+	display: block;
+	background-position: top right;
+}
+.sp-selector-2:checked ~ .sp-arrow.sp-a1,
+.sp-selector-3:checked ~ .sp-arrow.sp-a2,
+.sp-selector-4:checked ~ .sp-arrow.sp-a3,
+.sp-selector-5:checked ~ .sp-arrow.sp-a4 {
+    left: 15px;
+	display: block;
+	background-position: top left;
+}
+.sp-slideshow input:checked ~ .sp-content {
+  transition: background-position linear 0.6s, background-color linear 0.8s;
+}
+.sp-slideshow input:checked ~ .sp-content .sp-parallax-bg {
+  transition: background-position linear 0.7s;
+}
+input.sp-selector-1:checked ~ .sp-content {
+  background-position: 0 0;
+background-color: #727b7f;
+}
+
+input.sp-selector-2:checked ~ .sp-content {
+  background-position: -100px 0;
+background-color: #7f7276;
+}
+
+input.sp-selector-3:checked ~ .sp-content {
+  background-position: -200px 0;
+background-color: #737f72;
+}
+
+input.sp-selector-4:checked ~ .sp-content {
+  background-position: -300px 0;
+background-color: #79727f;
+}
+
+input.sp-selector-5:checked ~ .sp-content {
+  background-position: -400px 0;
+background-color: #7d7f72;
+}
+input.sp-selector-1:checked ~ .sp-content .sp-parallax-bg {
+  background-position: 0 0;
+}
+
+input.sp-selector-2:checked ~ .sp-content .sp-parallax-bg {
+  background-position: -200px 0;
+}
+
+input.sp-selector-3:checked ~ .sp-content .sp-parallax-bg {
+  background-position: -400px 0;
+}
+
+input.sp-selector-4:checked ~ .sp-content .sp-parallax-bg {
+  background-position: -600px 0;
+}
+
+input.sp-selector-5:checked ~ .sp-content .sp-parallax-bg {
+  background-position: -800px 0;
+}
+.sp-slider {
+  position: relative;
+left: 0;
+  width: 500%;
+height: 100%;
+list-style: none;
+  margin: 0;
+padding: 0;
+  transition: left ease-in 0.8s; 
+}
+.sp-slider > li {
+	color: #fff;
+	width: 20%;
+	box-sizing: border-box;
+	height: 100%;
+	padding: 0 60px;
+    float: left;
+	text-align: center;
+	opacity: 0.4;
+    transition: opacity ease-in 0.4s 0.8s; 
+}
+.sp-slider > li img{
+	box-sizing: border-box;
+	display: block;
+	margin: 0 auto;
+	padding: 40px 0 50px 0;
+	max-height: 100%;
+	max-width: 100%;
+}
+input.sp-selector-1:checked ~ .sp-content .sp-slider {
+  left: 0;
+}
+
+input.sp-selector-2:checked ~ .sp-content .sp-slider {
+  left: -100%;
+}
+
+input.sp-selector-3:checked ~ .sp-content .sp-slider {
+  left: -200%;
+}
+
+input.sp-selector-4:checked ~ .sp-content .sp-slider {
+  left: -300%;
+}
+
+input.sp-selector-5:checked ~ .sp-content .sp-slider {
+  left: -400%;
+}
+input.sp-selector-1:checked ~ .sp-content .sp-slider > li:first-child,
+input.sp-selector-2:checked ~ .sp-content .sp-slider > li:nth-child(2),
+input.sp-selector-3:checked ~ .sp-content .sp-slider > li:nth-child(3),
+input.sp-selector-4:checked ~ .sp-content .sp-slider > li:nth-child(4),
+input.sp-selector-5:checked ~ .sp-content .sp-slider > li:nth-child(5){
+	opacity: 1;
+} */
