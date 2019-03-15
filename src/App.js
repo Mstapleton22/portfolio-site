@@ -5,6 +5,7 @@ import About from './components/About';
 import Resume from './components/Resume';
 import Projects from './components/Projects';
 import Nav from './components/Nav';
+
 import './App.css';
 
 
@@ -16,6 +17,7 @@ class App extends Component {
       // navSearch: false,
       // isLoggedIn: false
     }
+
   }
 
   render() {

@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: transparent;
+  /* background-color: transparent; */
 }
 /* CSS RESET  ********************************/
 html,
@@ -83,7 +83,8 @@ summary,
 time,
 mark,
 audio,
-video {
+video,
+ {
   margin: 0;
   padding: 0;
   border: 0;
@@ -155,16 +156,18 @@ table {
 }
 /* HOME PAGE STYLING *********************************/
 .parallax {
+  /* display: initial; */
   background-image: url("bambooforest.jpg");
-  min-height: 565px;
+  min-height: 720px;
   margin-top: 50px;
   background-attachment: fixed;
   background-position: center;
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
   background-size: cover;
   opacity: .9;
   color: white;
 }
+
 .parallaxText {
   display: flex;
   font-size: 3em;
@@ -173,7 +176,6 @@ table {
   padding: 5%;
 }
 .parallax1 {
-  /* background-image: url("codeimg.png"); */
   background-color: #B98953 ;
   min-height: 310px; 
   background-attachment: fixed;
@@ -184,115 +186,52 @@ table {
 .homeContent {
   display: grid;
   font-size: 1.3em;
-  grid-template-columns: (1);
+  grid-template-columns: (1, .45fr);
   /* flex-direction: column; */
+  
   align-content: center;
   margin-top: -0px;
   /* margin-bottom: -100px; */
   color: white;
 }
 .hometext {
-  font-size: 1.5em;
-  /* flex-direction: column; */
-  /* margin-top: -10px; */
+  font-size: 1em;
   color: white;
+  /* padding: 25px; */
 }
 .iconRow {
-  margin-top: 100px;
+  /* margin-top: 100px; */
+  margin: 25px;
   display: flex;
   flex-direction: row;
-  justify-content: space-around
+  justify-content: center;
 }
 .iconRow a {
   color: white;
+  margin: 25px;
+}
+.icon {
+  font-size: 1.5em;
 }
 .Nav {
   display:flex;
   justify-content: flex-end;
-  padding: 11px;
+  padding-top: 5.5px;
+  padding-bottom: 5.5px;
+  padding: 10px;
   background-color: #B98953;
   color: white;
   position: fixed;
   font-size: .7em;
-  margin-top: -50px;
-  z-index: 1;
-  width: 98.7%;
-}
-
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: portrait) { 
-    .Nav {
-      display:flex;
-      justify-content: flex-end;
-      padding: 11px;
-      background-color: #B98953;
-      color: white;
-      position: fixed;
-      font-size: 1em;
-      margin-top: -50px;
-      z-index: 1;
-      width: 98.7%;
-    }
-    .Nav a {
-      text-decoration: none;
-      color: white;
-      padding: 1%;
-      margin-right: 15px;
-      margin-top: 7.5px;
-      margin-bottom: 7.5px;
-    }
-    .Nav a:hover {
-      padding: 2%;
-      background-color: #ebbe98;
-      border-radius: 10%;
-      box-shadow: 0 0 21px rgba(33,33,33,.2); 
-    }
-    .parallax {
-      background-image: url("bambooforest.jpg");
-      min-height: 750px;
-      margin-top: 50px;
-      background-attachment: fixed;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      opacity: .9;
-      color: white;
-    }
-    .parallaxAbout {
-      background-image: linear-gradient(#E39DAF, white);
-      /* background-color: #E39DAF; */
-      min-height: 850vh;
-      margin-top: 50px;
-      background-attachment: fixed;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      opacity: .9;
-      color: white;
-    }
-    .parallaxAbout1 {
-      background-image: linear-gradient(#E39DAF, white);
-      min-height: 750vh;
-      margin-top: 50px;
-      background-attachment: fixed;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      opacity: .9;
-      color: white;
-    } 
-    .bamboo1 {
-      display: none;
-    }
+  /* margin-top: -20px; */
+  z-index: 100;
+  width: 100%;
 }
 .Nav a {
   text-decoration: none;
   color: white;
-  padding: 1%;
-  margin-right: 15px;
+  padding: .7%;
+  margin-right: 50px;
   /* margin-bottom: 15px; */
  }
  .Nav a:hover {
@@ -303,7 +242,8 @@ table {
  .bambooRow{
    display:flex;
    flex-direction: row;
-   justify-content: space-between
+   justify-content: space-between;
+   padding: 25px;
  }
  .bamboo {
    height: 40vh;
@@ -311,6 +251,67 @@ table {
  .bamboo1 {
   height: 40vh;
   transform: scaleX(-1);
+}
+
+/* Hompage animation library *******************************/
+/* body{
+  background:#4F4F4F;
+  color:white;
+  font-family: 'Oswald', sans-serif;
+  display:flex;
+  justify-content:center;
+  padding-top:40px;
+} */
+/* h1{ */
+  /* font-size:60px; */
+/* } */
+/* h3{
+  font-weight:400;
+  color:#F2C94C;
+} */
+/* h1, */
+/* h3{
+  margin:0;
+  padding:0;
+} */
+/* img{ */
+  /* width:42px;
+  height:39px; */
+  /* margin:0px 20px; */
+/* } */
+/* .ticket{
+  position:relative;
+  height:410px;
+  width:690px;
+  background:black;
+  display:flex;
+  align-items:flex-end;
+  box-shadow: 0px 10px 40px rgba(0,0,0,.4);
+} */
+/* .flight-info{
+  position:relative;
+  z-index:99;
+  padding:30px;
+} */
+/* .flight-locations{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-top:-20px;
+} */
+/* canvas{
+  position:absolute;
+  border-radius:6px;
+  z-index:0;
+} */
+.overlay{
+  position:absolute;
+  background:rgba(0, 0, 0, .2);
+  left:0; 
+  right:0;
+  top:0;
+  bottom:0;
+  z-index:1;
 }
 
 /* ABOUT PAGE STYLING *********************************/
@@ -343,7 +344,108 @@ table {
 
 
 
-
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+    .Nav {
+      display:flex;
+      justify-content: flex-end;
+      padding: 3.6px;
+      background-color: #B98953;
+      color: white;
+      position: fixed;
+      font-size: 1em;
+      margin-top: -50px;
+      z-index: 1;
+      /* width: 98.7%; */
+    }
+    .Nav a {
+      text-decoration: none;
+      color: white;
+      /* padding: 1%; */
+      margin-right: 15px;
+      margin-top: 7.5px;
+      margin-bottom: 7.5px;
+    }
+    .Nav a:hover {
+      padding: 2%;
+      background-color: #ebbe98;
+      border-radius: 10%;
+      box-shadow: 0 0 21px rgba(33,33,33,.2); 
+    }
+    .parallax {
+      background-image: url("bambooforest.jpg");
+      min-height: 88.75739644970415vh;
+      margin-top: 50px;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      opacity: .9;
+      color: white;
+    }
+    .parallaxAbout {
+      /* background-image: linear-gradient(#E39DAF, white); */
+      /* background-color: #E39DAF; */
+      min-height: 850vh;
+      margin-top: 50px;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      opacity: .9;
+      color: white;
+    }
+    .parallaxAbout1 {
+      background-image: linear-gradient(#E39DAF, white);
+      min-height: 750vh;
+      margin-top: 50px;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      opacity: .9;
+      color: white;
+    } 
+    .homeContent {
+      display: grid;
+      font-size: 1.1em;
+      grid-template-columns: (1, .45fr);
+      align-content: center;
+      margin-left: -10px;
+      margin-right: 10px;
+      position: absolute;
+      z-index: 1;
+      color: white;
+    }
+    .hometext {
+      /* font-size: 1em; */
+      color: white;
+     
+    }
+    .bambooRow{
+      display:flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 25px;
+    }
+    .bamboo {
+      height: 8vh;
+      margin-top: 105px;
+      position: absolute;
+      z-index: 1;
+      margin-left: 10px;
+    }
+    .bamboo1 {
+      height: 8vh;
+      margin-top: 105px;
+      position: absolute;
+      z-index: 1;
+      margin-left: 285px;
+    }
+}
 
 
 
