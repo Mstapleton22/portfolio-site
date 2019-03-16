@@ -103,7 +103,8 @@ header,
 hgroup,
 menu,
 nav,
-section {
+section,
+  {
   display: block;
   font-family: 'Roboto', sans-serif;
 }
@@ -156,13 +157,11 @@ table {
 }
 /* HOME PAGE STYLING *********************************/
 .parallax {
-  /* display: initial; */
   background-image: url("bambooforest.jpg");
   min-height: 720px;
   margin-top: 50px;
   background-attachment: fixed;
   background-position: center;
-  /* background-repeat: no-repeat; */
   background-size: cover;
   opacity: .9;
   color: white;
@@ -200,18 +199,25 @@ table {
   /* padding: 25px; */
 }
 .iconRow {
-  /* margin-top: 100px; */
-  margin: 25px;
+
+  /* margin: 25px; */
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
 }
 .iconRow a {
   color: white;
-  margin: 25px;
+  /* margin: 25px; */
 }
 .icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
   font-size: 1.5em;
+}
+.iconRow a:hover {
+  opacity: .2;
+  background-color: unset;
 }
 .Nav {
   display:flex;
@@ -220,7 +226,7 @@ table {
   padding-bottom: 5.5px;
   padding: 10px;
   background-color: #B98953;
-  color: white;
+  color: black;
   position: fixed;
   font-size: .7em;
   /* margin-top: -20px; */
@@ -228,81 +234,30 @@ table {
   width: 100%;
 }
 .Nav a {
-  text-decoration: none;
+  text-decoration: unset;
   color: white;
-  padding: .7%;
+  padding: .5%;
   margin-right: 50px;
   /* margin-bottom: 15px; */
  }
  .Nav a:hover {
-   background-color: #ebbe98;
+   color: black;
+   background-color: white;
    border-radius: 10%;
    box-shadow: 0 0 21px rgba(33,33,33,.2); 
  }
- .bambooRow{
+ /* .bambooRow{
    display:flex;
    flex-direction: row;
    justify-content: space-between;
    padding: 25px;
- }
+ } */
  .bamboo {
-   height: 40vh;
+   height: 5vh;
  }
- .bamboo1 {
+ /* .bamboo1 {
   height: 40vh;
   transform: scaleX(-1);
-}
-
-/* Hompage animation library *******************************/
-/* body{
-  background:#4F4F4F;
-  color:white;
-  font-family: 'Oswald', sans-serif;
-  display:flex;
-  justify-content:center;
-  padding-top:40px;
-} */
-/* h1{ */
-  /* font-size:60px; */
-/* } */
-/* h3{
-  font-weight:400;
-  color:#F2C94C;
-} */
-/* h1, */
-/* h3{
-  margin:0;
-  padding:0;
-} */
-/* img{ */
-  /* width:42px;
-  height:39px; */
-  /* margin:0px 20px; */
-/* } */
-/* .ticket{
-  position:relative;
-  height:410px;
-  width:690px;
-  background:black;
-  display:flex;
-  align-items:flex-end;
-  box-shadow: 0px 10px 40px rgba(0,0,0,.4);
-} */
-/* .flight-info{
-  position:relative;
-  z-index:99;
-  padding:30px;
-} */
-/* .flight-locations{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  margin-top:-20px;
-} */
-/* canvas{
-  position:absolute;
-  border-radius:6px;
-  z-index:0;
 } */
 .overlay{
   position:absolute;
@@ -316,13 +271,26 @@ table {
 
 /* ABOUT PAGE STYLING *********************************/
 .About {
+  font-family: 'Roboto', sans-serif;
 }
 
+.NavAbout {
+  display:flex;
+  justify-content: flex-end;
+  padding-top: 5.5px;
+  padding-bottom: 5.5px;
+  padding: 10px;
+  background-color: white;
+  border-bottom: #B98953;
+  color: white;
+  font-size: .7em;
+  width: 100%;
+}
 .parallaxAbout {
   /* background-image: url("bambooforest.jpg"); */
   background-color: #E39DAF;
-  min-height: 765px;
-  margin-top: 50px;
+  min-height: 7652px;
+  margin-top: 40px;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -341,7 +309,40 @@ table {
   opacity: .9;
   color: white;
 } 
+.card {
+  border-radius: 0 !important;
+  /* margin-left: 4.9%;
+  margin-top: 5%;
+  margin-right: 10px;
+  margin-bottom: 70px; */
+  /* margin-top: 10%; */
 
+  border-radius: unset;
+  padding-right: 20%;
+
+  /* height: 78vh; */
+ } 
+.cardWord {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+  padding: 20%;
+}
+/* .card-img {
+  height: 70vh;
+  width: 100%;
+} */
+.colorAbout {
+  background-color: #d0405c;
+  
+}
+.imageAbout{
+  max-height: 99vh;
+  max-width: 104%;
+  margin-left: -15px;
+}
 
 
 @media only screen 
@@ -357,7 +358,7 @@ table {
       color: white;
       position: fixed;
       font-size: 1em;
-      margin-top: -50px;
+      /* margin-top: -10px; */
       z-index: 1;
       /* width: 98.7%; */
     }
@@ -445,6 +446,16 @@ table {
       z-index: 1;
       margin-left: 285px;
     }
+    /* .card {
+      border-radius: 0 !important;
+      margin-left: 4.9%;
+      margin-top: 5%;
+      margin-right: 10px;
+      margin-bottom: 100px;
+      border-radius: unset;
+      height: 40vh;
+      width: 100%; 
+     }  */
 }
 
 
