@@ -309,25 +309,16 @@ table {
   opacity: .9;
   color: white;
 } 
-.card {
-  border-radius: 0 !important;
-  /* margin-left: 4.9%;
-  margin-top: 5%;
-  margin-right: 10px;
-  margin-bottom: 70px; */
-  /* margin-top: 10%; */
-
-  border-radius: unset;
-  padding-right: 20%;
-
-  /* height: 78vh; */
- } 
+.self {
+  margin-top: 35px;
+}
 .cardWord {
   font-family: 'Roboto', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 3em;
+  margin-top: 20px;
   padding: 20%;
 }
 /* .card-img {
@@ -339,9 +330,23 @@ table {
   
 }
 .imageAbout{
-  max-height: 99vh;
+
+  max-height: 100vh;
   max-width: 104%;
   margin-left: -15px;
+}
+.cardDescription {
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.codeDescription{
+ padding-left: 3%;
+}
+
+.progressbar {
+  padding-bottom: 10%;
 }
 
 

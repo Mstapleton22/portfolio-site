@@ -12,9 +12,15 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
+      isHidden: false,
     }
   }
 
+  toggleHidden = () => {
+    this.setState()({
+      isHidden: !this.state.isHidden,
+    })
+  }
   render() {
     return (
       <div className="App">
@@ -22,7 +28,10 @@ class App extends Component {
           <div className="App">
             <Nav />
             <Route path="/" exact component={Home} />
-            <Route path="/about" exact component={About} />
+            <Route path="/about" exact component={About}
+              toggleHidden={this.toggleHidden}
+              isHidden={this.state.isHidden}
+            />
             <Route path="/resume" exact component={Resume} />
             <Route path="/projects" exact component={Projects} />
           </div>
