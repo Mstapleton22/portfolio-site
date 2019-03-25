@@ -391,9 +391,11 @@ table {
 }
 .buttonAbout:hover {
   /* background-color: white; */
+  text-decoration: none;
 }
 .buttonBack {
   background-color: transparent;
+  text-decoration: none;
   border: none;
   color: white;
   margin-bottom: 30px;
@@ -401,6 +403,7 @@ table {
   transition-duration: 0.4s;
 }
 .buttonBackDesign {
+  text-decoration: none;
   background-color: transparent;
   border: none;
   display: flex;
@@ -412,6 +415,8 @@ table {
 }
 .buttonBack:hover {
   /* background-color: white; */
+  text-decoration: none;
+
 }
 .self {
   margin-top: 35px;
