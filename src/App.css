@@ -429,9 +429,14 @@ table {
 
 /* PROJECT PAGE ******************************** */
 
-.spark h1 {
-  font-size: 5em;
-  padding-top: 3%;
+.projects {
+  font-size: 1.3em;
+  padding-top: 5%;
+}
+
+.projectImg{
+  width: 50vw;
+  height: 100%;
 }
 
 @media only screen 
