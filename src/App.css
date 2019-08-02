@@ -158,7 +158,8 @@ table {
 /* HOME PAGE STYLING *********************************/
 .parallax {
   background-image: url("bambooforest.jpg");
-  min-height: 720px;
+  /* min-height: 720px; */
+  height: 95vh;
   margin-top: 50px;
   background-attachment: fixed;
   background-position: center;
@@ -192,18 +193,31 @@ table {
   flex-direction: row;
   justify-content: flex-start;
 }
-.iconRow a {
+/* .iconRow a {
   color: white;
-}
+} */
 .icon {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   font-size: 1.5em;
 }
-.iconRow a:hover {
+
+/* .iconRow a:hover {
   opacity: .2;
   background-color: unset;
+} */
+.icon:hover {
+  content: url("/bamboo.png");
+  width: 2vh;
+  height: 100%;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  display: inline-block;
+  background-color: transparent;
 }
 .Nav {
   display:flex;
@@ -226,7 +240,7 @@ table {
  }
  .Nav a:hover {
    color: black;
-   background-color: white;
+   /* background-color: white; */
    border-radius: 10%;
    box-shadow: 0 0 21px rgba(33,33,33,.2); 
  }
@@ -301,7 +315,6 @@ table {
 
 .progressbar {
   padding-bottom: 10%;
-
 }
 .progressText {
   font-weight: bold;
@@ -435,9 +448,14 @@ table {
 }
 
 .projectImg{
-  width: 50vw;
+  width: 30vw;
   height: 100%;
 }
+.projectCard {
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+
 
 @media only screen 
   and (min-device-width: 375px) 

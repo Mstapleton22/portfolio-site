@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import Fade from 'react-reveal/Fade'
 
 class Projects extends Component {
   constructor() {
@@ -77,61 +77,31 @@ class Projects extends Component {
           github: "https://github.com/Mstapleton22/javaScript-flashcards"
         }
       ],
-      counter: 0,
     }
-  }
-
-  nextSlide() {
-    if (this.state.counter < this.state.projects.length - 1) {
-      this.setState({
-        counter: this.state.counter + 1
-      })
-    } else {
-      this.setState({
-        counter: 0
-      })
-    }
-    console.log(this.state.projects[this.state.counter])
-  }
-
-  backSlide() {
-    if (this.state.counter > 0) {
-      this.setState({
-        counter: this.state.counter - 1
-      })
-    } else {
-      this.setState({
-        counter: this.state.projects.length - 1
-      })
-    }
-    console.log(this.state.projects[this.state.counter])
   }
 
   render() {
     return (
       <div className="projects">
-        <div class='header row'>
-          <div class='col-lg-6 col-md-12 col-sm-12'>
-            <img className="projectImg" src={this.state.projects[this.state.counter].image} alt="project photo" />
-          </div>
-          {/* </div> */}
-          {/* <div class='body row'> */}
-          {/* <div class="col-6"></div> */}
-          <div class="col-lg-6 col-md-12 col-sm-12">
-            <div>{this.state.projects[this.state.counter].name}</div>
-            <div>{this.state.projects[this.state.counter].description}</div>
-            <h5 class=''>The Tech:</h5>
-            {/* <div class=''> */}
-            <div>{this.state.projects[this.state.counter].tech}</div>
-            {/* </div> */}
-            <a href={this.state.projects[this.state.counter].github} target="_blank">Checkout the code on GitHub!</a>
-            <div class="">
-              <div className="fa fa-arrow-left fa-2x arrowLeft" onClick={() => this.backSlide()}></div>
-              <div className="fa fa-arrow-right fa-2x arrowRight" onClick={() => this.nextSlide()}></div>
-            </div>
-          </div>
+        <div>
+          {
+            this.state.projects.map(item =>
+              <div className="projectCard">
+                <Fade left Cascade>
+                  <img className="projectImg" src={`${item.image}`} />
+                </Fade>
+                <div>
+                  <h1>{item.name}</h1>
+                  <h3>{item.description}</h3>
+                  <h5>{item.tech}</h5>
+                  <h5>{item.github}</h5>
+                </div>
+              </div>
+            )
+          }
         </div>
-      </div >
+      </div>
+
     );
   }
 }

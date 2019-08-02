@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Effects from '../components/Effects.js';
-// import './App.css';
+// import '../App.css';
 
 
 class App extends Component {

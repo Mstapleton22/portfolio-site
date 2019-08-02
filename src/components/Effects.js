@@ -28,7 +28,6 @@ class Effects extends Component {
                 “There is only one way to learn. It's through action. Everything you need to know you have learned through your journey.”
   ― Paulo Coelho, The Alchemist
 </p>
-
             </MDBMask>
           </MDBView>
         </MDBCol>

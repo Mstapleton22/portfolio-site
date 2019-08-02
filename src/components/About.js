@@ -14,7 +14,6 @@ class About extends Component {
       photography: false,
     }
 
-
   }
   toggleHidden = () => {
     this.setState({
