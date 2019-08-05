@@ -222,13 +222,13 @@ class Projects extends Component {
             }
           </div>
         </div>
-        <div className="iconsRow container">
-          <div className="row">
+        <div className="iconsRow container justify-content-center">
+          <div className="row justify-content-center">
             {this.state.icons.map(item =>
               <div className="col-lg-2">
-                <div >
+                <div>
                   <img className="icons" src={item.image} />
-                  <p>{item.name}</p>
+                  {/* <p>{item.name}</p> */}
                 </div>
 
               </div>

@@ -592,10 +592,10 @@ table {
 #inbox {
   width:780px;
   height:450px;
-  margin-left: 20%;
+  margin-left: 27%;
   background-color:transparent;
   padding:10px;
-  margin-top:-15%;
+  margin-top:-5%;
   border:solid 3px red;
   position: absolute;
   z-index: 1000;
@@ -622,7 +622,7 @@ table {
   margin-top:-1.9%;
   border:solid 15px #174058;
   position: absolute;
-  z-index: 1000;
+  z-index: 0;
 }
 
 #stevenText {
@@ -745,9 +745,11 @@ table {
   flex-direction: row wrap;
 }
 .icons {
-  /* display: flex;
-  flex-direction: row; */
-  width: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  width: 100px;
   height: 100%;
 }
 @media only screen 
