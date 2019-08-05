@@ -11,20 +11,11 @@ class Nav extends Component {
 
   render() {
     return (
-      <div className="Nav About iconRow">
-        {/* <img className="bamboo" src={process.env.PUBLIC_URL + '/bamboo.png'} alt="bamboo" /> */}
-        <a href="mailTo:mike.stapleton2@gmail.com"><i class="fas fa-at icon"></i></a>
-        {/* <img className="bamboo" src={process.env.PUBLIC_URL + '/bamboo.png'} alt="bamboo" /> */}
-
-
-        <a href="https://github.com/Mstapleton22" target="_blank"><i class="fab fa-github icon"></i></a>
-        {/* <img className="bamboo" src={process.env.PUBLIC_URL + '/bamboo.png'} alt="bamboo" /> */}
-
-        <a href="https://www.linkedin.com/in/mgstapleton/" target="_blank"><i class="fab fa-linkedin-in icon"></i></a>
-        {/* <img className="bamboo" src={process.env.PUBLIC_URL + '/bamboo.png'} alt="bamboo" /> */}
-
-        <a href="https://www.instagram.com/george.michael.travels/" target="_blank"><i class="fab fa-instagram icon"></i></a>
-
+      <div className="Nav iconRow">
+        <a href="mailTo:mike.stapleton2@gmail.com"><i className="fas fa-at icon"></i></a>
+        <a href="https://github.com/Mstapleton22" target="_blank"><i className="fab fa-github icon"></i></a>
+        <a href="https://www.linkedin.com/in/mgstapleton/" target="_blank"><i className="fab fa-linkedin-in icon"></i></a>
+        <a href="https://www.instagram.com/george.michael.travels/" target="_blank"><i className="fab fa-instagram icon"></i></a>
         <Link key="button" key="loader" to="/">
           Home
         </Link>
