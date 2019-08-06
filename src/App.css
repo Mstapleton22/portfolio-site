@@ -193,9 +193,9 @@ table {
   flex-direction: row;
   justify-content: flex-start;
 }
-/* .iconRow a {
+.iconRow a {
   color: white;
-} */
+}
 .icon {
   display: flex;
   flex-direction: row;
@@ -203,19 +203,13 @@ table {
   font-size: 1.5em;
 }
 
-/* .iconRow a:hover {
+.iconRow a:hover {
   opacity: .2;
-  background-color: unset;
-} */
+  /* background-color: unset; */
+}
 .icon:hover {
-  content: url("/bamboo.png");
-  width: 2vh;
+  /* width: 2vh; */
   height: 100%;
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
   display: inline-block;
   background-color: transparent;
 }
@@ -228,7 +222,7 @@ table {
   background-color: #B98953;
   color: black;
   position: fixed;
-  font-size: .7em;
+  font-size: 1em;
   z-index: 100;
   width: 100%;
 }
@@ -240,15 +234,13 @@ table {
  }
  .Nav a:hover {
    color: black;
-   /* background-color: white; */
+   background-color: white;
    border-radius: 10%;
    box-shadow: 0 0 21px rgba(33,33,33,.2); 
  }
-
- .bamboo {
+ /* .bamboo {
    height: 5vh;
- }
-
+ } */
 .overlay{
   position:absolute;
   background:rgba(0, 0, 0, .2);
@@ -456,6 +448,10 @@ table {
   z-index: 0; */
   /* #B98953 */
   /* border: 10px solid rgb(112, 188, 255); */
+}
+.graphicImg {
+  width: 30%;
+  height: 30%;
 }
 
 .projectCard {
@@ -742,15 +738,27 @@ table {
 }
 .iconsRow {
   display: flex;
-  flex-direction: row wrap;
+  flex-direction: row;
+  align-items: center;
+   /* height: 10%; */
+  width: 60%;
+  overflow: scroll;
+}
+.iconBox {
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* align-items: flex-end; */
 }
 .icons {
+  padding: 30px;
+  /* width: 100px;
+  height: 100vh; */
+}
+.iconName {
+  padding-top: 10px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 10px;
-  width: 100px;
-  height: 100%;
+  align-content: center;
 }
 @media only screen 
   and (min-device-width: 375px) 

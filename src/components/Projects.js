@@ -15,7 +15,9 @@ class Projects extends Component {
           name: "Rocket Software HackaTHON winner",
           description: "Fully Responsive web app constructed with school faculty, staff and parents in mind. With the help of this website, the staff will spend 50% less time on the phone and 50% more time focused on students.",
           tech: "AWS (SES, IAM & s3), React.js, Knex.js, Express.js, PostgrSQL, Heroku, MDBootstrap, CSS3",
-          github: "https://intense-badlands-80434.herokuapp.com/"
+          github: "https://intense-badlands-80434.herokuapp.com/",
+          graphic: ""
+
         },
         {
           id: "aged",
@@ -24,7 +26,9 @@ class Projects extends Component {
           name: "Aged & Infused",
           description: "An app that allows users to customize infusion kits based off of the company Aged & Infused's ingredient list",
           tech: "Vue, VueX, JavaScript, HTML5, CSS3, ProCreate, Illustrator",
-          github: "https://www.youtube.com/watch?time_continue=1&v=2n2z1Vu2ndc"
+          github: "https://www.youtube.com/watch?time_continue=1&v=2n2z1Vu2ndc",
+          graphic: ""
+
         },
         {
           id: "spark",
@@ -33,7 +37,8 @@ class Projects extends Component {
           name: "sPark",
           description: "Lightweight parking app that allows the user to park without pulling out a credit card",
           tech: "React.js, Twilio, Ngrok, Express.js, Knex.js, CSS3",
-          github: "https://github.com/Truvisory/parking-app-ui"
+          github: "https://github.com/Truvisory/parking-app-ui",
+          graphic: ""
         },
         {
           id: "farmers",
@@ -42,7 +47,8 @@ class Projects extends Component {
           name: "Famers Markit",
           description: "Social app that allows the user to connect with local farmers markets, small businesses and products",
           tech: "Vue, CSS3, ProCreate, Knex.js, Express.js, PostgresSQL",
-          github: "https://github.com/Mstapleton22/farmers-markit-frontend/tree/michael"
+          github: "https://github.com/Mstapleton22/farmers-markit-frontend/tree/michael",
+          graphic: "./logoName.png"
         },
         {
           id: "eats",
@@ -51,7 +57,9 @@ class Projects extends Component {
           name: "Galvanize Eats",
           description: "Restaurant website that calculates your order price",
           tech: "HTML5, CSS3, vanilla JavaScript, DOM manipulation",
-          github: "https://github.com/Mstapleton22/galvanize-eats"
+          github: "https://github.com/Mstapleton22/galvanize-eats",
+          graphic: ""
+
         },
         {
           id: "inbox",
@@ -60,7 +68,9 @@ class Projects extends Component {
           name: "Inbox",
           description: "Email inbox that allows user to read, write, delete and favorite emails",
           tech: "React.js, Bootstrap, JavaScript, Knex.js, Express.js, PostgresSQL",
-          github: "https://github.com/Mstapleton22/react-inbox"
+          github: "https://github.com/Mstapleton22/react-inbox",
+          graphic: ""
+
         },
         {
           id: "steven",
@@ -69,7 +79,9 @@ class Projects extends Component {
           name: "Steven Universe Characters",
           description: "Character card generator for the multiverse of the cartoon Steven Universe",
           tech: "React.js, Bootstrap, JavaScript",
-          github: "https://github.com/Mstapleton22/stevenuniverse-react"
+          github: "https://github.com/Mstapleton22/stevenuniverse-react",
+          graphic: ""
+
         },
         {
           id: "cart",
@@ -78,7 +90,9 @@ class Projects extends Component {
           name: "Shopping Cart",
           description: "A shopping cart that allows user to add items to their cart and calculate the total of their items",
           tech: "React.js, Bootstrap, JavaScript",
-          github: "https://github.com/Mstapleton22/shoppingCartReact"
+          github: "https://github.com/Mstapleton22/shoppingCartReact",
+          graphic: ""
+
         },
         {
           id: "pixal",
@@ -87,7 +101,8 @@ class Projects extends Component {
           name: "Pixal Art Maker",
           description: "Pixel art space to create images using pixels",
           tech: "HTML, CSS3, JavaScript",
-          github: "https://github.com/Mstapleton22/pixel-art-maker"
+          github: "https://github.com/Mstapleton22/pixel-art-maker",
+          graphic: ""
         },
       ],
       icons: [
@@ -196,54 +211,74 @@ class Projects extends Component {
         <div className="projects container-fluid">
           <div>
             {
-              this.state.projects.map(item =>
-                < div className="projectCard" >
-                  <div className="row">
-
-                    <div className="col-lg-7">
-                      <Fade left Cascade >
-                        <div id={item.id}></div>
-                        <img className="projectImg" src={`${item.image}`} />
-                      </Fade>
+              this.state.projects.map(item => {
+                if (item.graphic !== '') {
+                  return (
+                    < div className="projectCard" >
+                      <div className="row">
+                        <div className="col-lg-7">
+                          <Fade left Cascade >
+                            <div id={item.id}></div>
+                            <img className="projectImg" src={`${item.image}`} />
+                          </Fade>
+                        </div>
+                        <div className="col-lg-4">
+                          <Zoom >
+                            <div id={item.word}></div>
+                            <h1 className="projectText">{item.name}</h1>
+                            <h4 className="projectText">{item.description}</h4>
+                            <h5 className="projectText">{item.tech}</h5>
+                            <a className="projectText" href={`${item.github}`}>Link to the good stuff</a>
+                            <div>Created logo and graphic art:</div>
+                            <img className="graphicImg" src={`${item.graphic}`} />
+                          </Zoom>
+                        </div>
+                      </div>
                     </div>
-                    <div className="col-lg-4">
-                      <Zoom >
-                        <div id={item.word}></div>
-                        <h1 className="projectText">{item.name}</h1>
-                        <h4 className="projectText">{item.description}</h4>
-                        <h5 className="projectText">{item.tech}</h5>
-                        <a className="projectText" href={`${item.github}`}>Link to the good stuff</a>
-                      </Zoom>
+                  )
+                } else {
+                  return (
+                    < div className="projectCard" >
+                      <div className="row">
+                        <div className="col-lg-7">
+                          <Fade left Cascade >
+                            <div id={item.id}></div>
+                            <img className="projectImg" src={`${item.image}`} />
+                          </Fade>
+                        </div>
+                        <div className="col-lg-4">
+                          <Zoom >
+                            <div id={item.word}></div>
+                            <h1 className="projectText">{item.name}</h1>
+                            <h4 className="projectText">{item.description}</h4>
+                            <h5 className="projectText">{item.tech}</h5>
+                            <a className="projectText" href={`${item.github}`}>Link to the good stuff</a>
+                          </Zoom>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-
+                  )
+                }
+              }
               )
+
             }
           </div>
         </div>
-        <div className="iconsRow container justify-content-center">
-          <div className="row justify-content-center">
+          <div className="iconsRow">
             {this.state.icons.map(item =>
-              <div className="col-lg-2">
-                <div>
+              <div>
+                <div className="iconBox">
                   <img className="icons" src={item.image} />
-                  {/* <p>{item.name}</p> */}
                 </div>
-
+                <div>
+                  <p className="iconName">{item.name}</p>
+                </div>
               </div>
-
             )
             }
-            <div className="col-lg-10">
-              <div >
-                <p>blah</p>
-              </div>
-            </div>
           </div>
         </div>
-      </div>
-      // </div>
     );
   }
 }
