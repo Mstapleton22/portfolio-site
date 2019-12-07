@@ -115,14 +115,14 @@ class Projects extends Component {
               image: "./icons/vanilla.png",
               name: "Vanilla"
             },
-            {
-              image: "./icons/whiskey.png",
-              name: "Whiskey"
-            },
-            {
-              image: "./icons/bottle.png",
-              name: "Infusion Bottle"
-            },
+            // {
+            //   image: "./icons/whiskey.png",
+            //   name: "Whiskey"
+            // },
+            // {
+            //   image: "./icons/bottle.png",
+            //   name: "Infusion Bottle"
+            // },
           ]
 
         },
@@ -245,7 +245,7 @@ class Projects extends Component {
                         <div className="col-lg-7">
                           <Fade left Cascade >
                             <div id={item.id}></div>
-                            <img className="projectImg" src={`${item.image}`} />
+                            <img className="projectImgAged" src={`${item.image}`} />
                           </Fade>
                         </div>
                         <div className="col-lg-4">
@@ -258,8 +258,8 @@ class Projects extends Component {
                             <div className="iconsRow">
                               {this.state.projects[1].icons.map(item =>
                                 <div>
-                                  <div className="iconBox">
-                                    <img className="icons" src={item.image} />
+                                  <div className="iconBox image-fluid">
+                                    <img className="icons image-fluid" src={item.image} />
                                   </div>
                                   <div>
                                     <p className="iconName">{item.name}</p>
@@ -268,6 +268,7 @@ class Projects extends Component {
                               )
                               }
                             </div>
+                            <p>Icons in collaboration with <a href="https://accustudios.com/" target="_blank">AccuStudios</a></p>
                           </Zoom>
                         </div>
                       </div>

@@ -22,12 +22,12 @@ class Nav extends Component {
         <Link to="/About">
           About
         </Link>
-        <a className="" href="https://drive.google.com/file/d/0By_oA_Z0oxCGd09fdEJ3Vk5MaUtEcGpEUUVHSjFIUkxwUVNJ/view?usp=sharing" target="_blank">
-          Resume
-        </a>
         <Link to="/Projects">
           Projects
         </Link>
+        <a className="" href="https://drive.google.com/file/d/0By_oA_Z0oxCGd09fdEJ3Vk5MaUtEcGpEUUVHSjFIUkxwUVNJ/view?usp=sharing" target="_blank">
+          Resume
+        </a>
       </div>
     );
   }

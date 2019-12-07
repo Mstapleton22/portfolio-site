@@ -69,12 +69,12 @@ export default class Slider extends Component {
                         ))
                     }
                 </div>
-                <LeftArrow
+                {/* <LeftArrow
                     goToPrevSlide={this.goToPrevSlide}
                 />
                 <RightArrow
                     goToNextSlide={this.goToNextSlide}
-                />
+                /> */}
             </div>
         );
     }

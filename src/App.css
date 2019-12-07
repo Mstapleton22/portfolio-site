@@ -83,7 +83,7 @@ summary,
 time,
 mark,
 audio,
-video,
+video
  {
   margin: 0;
   padding: 0;
@@ -103,7 +103,7 @@ header,
 hgroup,
 menu,
 nav,
-section,
+section
   {
   display: block;
   font-family: 'Roboto', sans-serif;
@@ -157,15 +157,17 @@ table {
 }
 /* HOME PAGE STYLING *********************************/
 .parallax {
-  background-image: url("bambooforest.jpg");
+  background-image: url("mountainLedge.jpg");
   /* min-height: 720px; */
-  height: 95vh;
-  margin-top: 50px;
-  background-attachment: fixed;
-  background-position: center;
+  height: 100vh;
+  /* margin-top: 50px; */
+  padding: 100px;
+  /* background-attachment: fixed; */
+  /* background-position: center; */
   background-size: cover;
-  opacity: .9;
+  /* opacity: .9; */
   color: white;
+  text-align: left;
 }
 
 .parallaxText {
@@ -219,7 +221,7 @@ table {
   padding-top: 5.5px;
   padding-bottom: 5.5px;
   padding: 10px;
-  background-color: #B98953;
+  background-color: transparent;
   color: black;
   position: fixed;
   font-size: 1em;
@@ -279,8 +281,8 @@ table {
   margin-left: -15px;
 }
 .imageDesign{
-  height: 60%;
-  width: 30%;
+  height: 50%;
+  width: 20%;
   padding: 3%;
   margin-left: -15px;
 }
@@ -288,7 +290,7 @@ table {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  width: 50vw;
+  width: 100vw;
 }
 .logo {
   max-height: 70vh;
@@ -319,6 +321,7 @@ table {
 }
 .slider-wrapper {
   display: flex;
+  overflow: scroll;
   flex-direction: row;
   padding-top: 25px;
   width: 100%;
@@ -369,7 +372,7 @@ table {
 }
 .cardResume {
     font-family: 'Roboto', sans-serif;
-    margin-top: 30%;
+    /* margin-top: 30%; */
 }
 .cardDesign {
   font-family: 'Roboto', sans-serif;
@@ -442,7 +445,7 @@ table {
 
 .projectImg{
   width: 40vw;
-  height: 100%;
+  height: auto;
   margin-right: -150px;
   /* position: absolute;
   z-index: 0; */
@@ -451,7 +454,12 @@ table {
 }
 .graphicImg {
   width: 30%;
-  height: 30%;
+  height: auto;
+}
+.projectImgAged {
+  width: 70%;
+  height: auto;
+  /* margin-right: -150px; */
 }
 
 .projectCard {
@@ -511,6 +519,43 @@ table {
   border:solid 3px #c96e298e;
   position: absolute;
   z-index: 0;
+}
+.iconsRow {
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+  margin-top: 15%;
+   height: 5%;
+  width: 20vw;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overflow: scroll;
+
+  display: inline-block;
+  border: red 3px solid;
+  /* margin-bottom: -200px; */
+  /* position:absolute;
+  z-index: 1000; */
+/* background-color: #333e4a23; */
+}
+.iconBox {
+ /* padding: -20%; */
+ /* border: red 3px solid; */
+}
+.icons {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 40px;
+  /* padding-bottom: -100px; */
+  height: 10%;
+  width: 12vw;
+  /* border: red 3px solid; */
+}
+.iconName {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
 }
 #spark {
   width:250px;
@@ -736,30 +781,9 @@ table {
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-.iconsRow {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-   /* height: 10%; */
-  width: 60%;
-  overflow: scroll;
-}
-.iconBox {
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* align-items: flex-end; */
-}
-.icons {
-  padding: 30px;
-  /* width: 100px;
-  height: 100vh; */
-}
-.iconName {
-  padding-top: 10px;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-}
+
+
+
 @media only screen 
   and (min-device-width: 375px) 
   and (max-device-width: 812px) 
@@ -790,7 +814,7 @@ table {
       box-shadow: 0 0 21px rgba(33,33,33,.2); 
     }
     .parallax {
-      background-image: url("bambooforest.jpg");
+      background-image: url("mountainLedge.jpg");
       min-height: 88.75739644970415vh;
       margin-top: 50px;
       background-attachment: fixed;
