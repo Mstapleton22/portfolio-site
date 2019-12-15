@@ -193,16 +193,22 @@ table {
 .iconRow {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  /* justify-content: space-between; */
+  position: absolute;
+  z-index: 100;
+  font-size: .3em;
 }
 .iconRow a {
   color: white;
+  font-size: 1em;
+
 }
 .icon {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
   font-size: 1.5em;
+  /* z-index: 100; */
+
 }
 
 .iconRow a:hover {
@@ -327,6 +333,25 @@ table {
   width: 100%;
   z-index: 1;
 } 
+.gallery {
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+  display: flex;
+}
+.image{
+  scroll-snap-align: center;
+  padding: 2%;
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  max-height: 90vh;
+  margin: auto;
+}
+.photoContainer {
+  display: grid;
+  height: 100%;
+  
+}
 .bio {
   color: white;
   display: flex;
@@ -428,6 +453,7 @@ table {
 }
 .self {
   margin-top: 35px;
+  
 }
 .resume {
   text-decoration: none;

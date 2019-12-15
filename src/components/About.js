@@ -143,7 +143,6 @@ class About extends Component {
             </button>
               </div>
             }
-
           </div>
         </div>
         <div className="row">

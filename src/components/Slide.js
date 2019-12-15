@@ -3,7 +3,6 @@ import React from 'react'
 const Slide = ({ image }) => {
   const styles = {
     backgroundImage: `url(${image})`,
-  
     backgroundRepeat: 'no-repeat',
     backgroundPosition: '50% 60%',
     height: 400,
