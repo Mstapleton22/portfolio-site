@@ -11,20 +11,20 @@ class Nav extends Component {
 
   render() {
     return (
-      <div className="Nav">
+      <header className="Nav">
         <Link key="button" key="loader" to="/">
           Home
         </Link>
-        <Link to="/About">
+        {/* <Link to="/About">
           About
-        </Link>
+        </Link> */}
         <Link to="/Projects">
           Projects
         </Link>
         <a className="" href="https://drive.google.com/file/d/0By_oA_Z0oxCGd09fdEJ3Vk5MaUtEcGpEUUVHSjFIUkxwUVNJ/view?usp=sharing" target="_blank">
           Resume
         </a>
-      </div>
+      </header>
     );
   }
 }

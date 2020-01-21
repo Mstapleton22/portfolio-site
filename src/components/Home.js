@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Effects from '../components/Effects.js';
 import About from '../components/About.1.js'
-// import '../App.css';
+import '../App.css';
 
 
 class App extends Component {
@@ -14,7 +14,7 @@ class App extends Component {
     // className="App"
     return (
       <div >
-        <Effects />
+        {/* <Effects /> */}
         <About />
       </div>
     );

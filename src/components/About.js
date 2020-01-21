@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import ProgressBar from '../components/ProgressBar.js';
-import Slider from '../components/Slider.js';
+// import ProgressBar from '../components/ProgressBar.js';
+// import Slider from '../components/Slider.js';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
-class About extends Component {
+class Aboutt extends Component {
   constructor() {
     super()
     this.state = {
@@ -213,4 +213,4 @@ class About extends Component {
   }
 }
 
-export default About;
+export default Aboutt;

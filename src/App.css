@@ -3,8 +3,13 @@
   /* background-color: transparent; */
 }
 /* CSS RESET  ********************************/
-html,
-body,
+html, body {
+  padding: 0;
+  margin: 0;
+  --bar-height: 0px;
+  --extra-space: 0px;
+
+}
 div,
 button,
 span,
@@ -103,11 +108,11 @@ header,
 hgroup,
 menu,
 nav,
-section
+/* section
   {
   display: block;
   font-family: 'Roboto', sans-serif;
-}
+} */
 body {
   line-height: 1;
   font-family: 'Roboto', sans-serif;
@@ -158,14 +163,9 @@ table {
 /* HOME PAGE STYLING *********************************/
 .parallax {
   background-image: url("mountainLedge.jpg");
-  /* min-height: 720px; */
   height: 100vh;
-  /* margin-top: 50px; */
-  padding: 100px;
-  /* background-attachment: fixed; */
-  /* background-position: center; */
+  width: 100vw;
   background-size: cover;
-  /* opacity: .9; */
   color: white;
   text-align: left;
 }
@@ -176,9 +176,10 @@ table {
   justify-content: flex-start;
   align-items: flex-start;
   padding: 5%;
+  
 }
 
-.homeContent {
+/* .homeContent {
   display: grid;
   font-size: 1.3em;
   grid-template-columns: (1, .45fr);
@@ -189,7 +190,7 @@ table {
 .hometext {
   font-size: 1em;
   color: white;
-}
+} */
 .iconRow {
   display: flex;
   flex-direction: row;
@@ -320,19 +321,57 @@ table {
   font-weight: bold;
   color: black;
 }
-.slide{
-  background-size: 90%;
-  overflow: hidden;
-  padding-right: 3%
+
+.arrow-down {
+  width: 0; 
+  height: 0; 
+  margin-left: -109px;
+  margin-top: 0px;
+  /* position: absolute; */
+  z-index: 100;
+  border-radius: 10%;
+  border-left: 950px solid transparent;
+  border-right: 950px solid transparent;
+  border-top: 100px solid #5cc87f;
+  /* border-bottom: 100px; */
 }
-.slider-wrapper {
+/* scroll north - south */
+div.col {
+  /* padding: 0px 0px !important; */
+  padding-right: -40px;
+}
+::-webkit-scrollbar { 
+  display: none; 
+  }
+
+article {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  scroll-padding-top:  calc(var(--bar-height) + var(--extra-space));
+  position: absolute;
+  top:0;
+  bottom:0;
+  left: 0;
+  right: 0;
+  padding: var(--bar-height) 0 0 0;
+  -webkit-overflow-scrolling: touch; 
+}
+section {
+  scroll-snap-align: none;
   display: flex;
-  overflow: scroll;
-  flex-direction: row;
-  padding-top: 25px;
-  width: 100%;
-  z-index: 1;
-} 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+section.large {
+  height: 100vh
+}
+header {
+  position: fixed;
+  /* height: 10vh; */
+}
+
+/* photo gallery */
 .gallery {
   scroll-snap-type: x mandatory;
   overflow-x: scroll;
@@ -937,6 +976,8 @@ table {
     .buttonAbout:hover {
      display: none;
     }
+
+
 }
 
 
